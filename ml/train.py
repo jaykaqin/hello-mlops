@@ -1,9 +1,16 @@
-import mlflow, mlflow.sklearn, os, time, json, joblib
+import os
+import time
+import joblib
+
+import mlflow
+import mlflow.sklearn
 from pathlib import Path
+
 
 # 极简：把 data.csv 的行数当作“指标”，把模型存个占位文件
 DATA = Path("data/data.csv")
-REG_DIR = Path("ml/registry"); REG_DIR.mkdir(parents=True, exist_ok=True)
+REG_DIR = Path("ml/registry")
+REG_DIR.mkdir(parents=True, exist_ok=True)
 MODEL_PATH = REG_DIR / "model.pkl"
 
 mlflow.set_experiment("hello-mlops")
