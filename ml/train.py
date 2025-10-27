@@ -15,6 +15,7 @@ MODEL_PATH = REG_DIR / "model.pkl"
 
 mlflow.set_experiment("hello-mlops")
 
+
 def run(exp_name="baseline"):
     with mlflow.start_run(run_name=exp_name):
         # 参数
@@ -23,9 +24,10 @@ def run(exp_name="baseline"):
         lines = sum(1 for _ in open(DATA, "r", encoding="utf-8"))
         mlflow.log_metric("line_count", lines)
         # 伪“模型”文件
-        joblib.dump({"note":"hello-model","lines":lines}, MODEL_PATH)
+        joblib.dump({"note": "hello-model", "lines": lines}, MODEL_PATH)
         mlflow.log_artifact(str(MODEL_PATH))
         print(f"✅ {exp_name} done. lines={lines}")
+
 
 if __name__ == "__main__":
     run("baseline")
