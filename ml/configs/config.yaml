@@ -1,0 +1,3 @@
+data_path: data/data.csv
+seed: 42
+experiment_name: hello-mlops

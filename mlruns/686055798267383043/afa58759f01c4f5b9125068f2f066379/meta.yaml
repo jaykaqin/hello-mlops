@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/DevOps_MlOps/Final%20project/HelloMLOps/mlruns/686055798267383043/afa58759f01c4f5b9125068f2f066379/artifacts
+end_time: 1761550919131
+entry_point_name: ''
+experiment_id: '686055798267383043'
+lifecycle_stage: active
+run_id: afa58759f01c4f5b9125068f2f066379
+run_name: improved
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761550919025
+status: 3
+tags: []
+user_id: jayka
